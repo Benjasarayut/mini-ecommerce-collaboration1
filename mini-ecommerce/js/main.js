@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('product-list');
     const searchInput = document.getElementById('searchInput');
+     const loader = document.getElementById('loader');
     let allProducts = [];
 
     // Fetch products from JSON
