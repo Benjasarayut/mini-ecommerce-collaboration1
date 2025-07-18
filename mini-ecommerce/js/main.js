@@ -52,7 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Search functionality
     searchInput.addEventListener('keyup', () => {
-        const searchTerm = searchInput.value.toLowerCase();
+        const searchTerm = searchInput.value.trim().toLowerCase(); //ปรับปรุง logic การค้นหาให้ดีขึ้น
+        if (searchTerm === '') {
+    displayProducts(allProducts); //เพิ่ม Validation 
+    return;
+}
         const filteredProducts = allProducts.filter(product => {
             return product.name.toLowerCase().includes(searchTerm);
         });
