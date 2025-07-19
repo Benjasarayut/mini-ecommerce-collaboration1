@@ -62,27 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Search functionality
     searchInput.addEventListener('keyup', () => {
-  const searchTerm = searchInput.value.trim().toLowerCase();
-
-  if (searchTerm === '') {
-    displayProducts(allProducts);
-    return;
-  }
-
-  const filteredProducts = allProducts.filter(product =>
-    product.name.toLowerCase().includes(searchTerm)
-  );
-
-  if (filteredProducts.length > 0) {
-    displayProducts(filteredProducts);
-  } else {
-    productList.innerHTML = `
-      <p style="color: white; font-size: 18px; padding: 10px;">
-        ไม่พบสินค้าที่ตรงกับคำว่า "<strong>${searchTerm}</strong>"
-      </p>
-    `;
-  }
-});
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredProducts = allProducts.filter(product => {
+            return product.name.toLowerCase().includes(searchTerm);
+        });
+        displayProducts(filteredProducts);
+    });
 
     // Initialize app
     loadProducts();
