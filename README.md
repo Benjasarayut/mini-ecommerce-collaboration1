@@ -1,4 +1,4 @@
-<h1>🛍️ Mini E-Commerce Project (Version 2)</h1>
+<h2>🛍️ Mini E-Commerce Project (Version 2)</h2>
 
 📦 รายละเอียดโปรเจกต์
 
