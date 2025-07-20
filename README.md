@@ -39,5 +39,6 @@ feature/ui-ux-improvements
 
 <h2>🛠 วิธีใช้งานโปรเจกต์</h2>
 
-1. Clone repository:
+Clone repository:
+```bash
 git clone https://github.com/Benjasarayut/mini-ecommerce-collaboration1.git
